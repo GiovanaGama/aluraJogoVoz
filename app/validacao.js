@@ -37,7 +37,7 @@ function verificaChute(num) {
         botao.addEventListener('click', () => {
             window.location.reload()
         })
-    } else if (num == 'game over' ){
+    } else if (num == 'game over' || num == 'Game over'){
         document.body.innerHTML = `
             <h1>GAME OVER</h1>
             <button id="reset">Reiniciar</button>
