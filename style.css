@@ -1,0 +1,65 @@
+:root {
+    font-family: 'Kanit', sans-serif;
+    background-color: #7C9D96;
+    color: #F4F2DE;
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 6em;
+    margin: 0;
+}
+
+h3 {
+    font-size: 3em;
+    margin: 30px;
+}
+
+.mensagem {
+    font-size: 2em;
+}
+
+.box {
+    border: 3px solid #F4F2DE;
+    display: inline-block;
+    min-height: 130px;
+    min-width: 130px;
+    font-size: 4em;
+    padding: 10px;
+    margin: 20px;
+}
+
+button {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #F4F2DE;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #F4F2DE;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition-duration: 0.3s;
+    background-color: #F4F2DE;
+    color: #7C9D96;
+    border: 3px solid #F4F2DE;
+  }
+
+button:active {
+    background-color: #E9B384; 
+    color: #F4F2DE;
+    border: 3px solid #E9B384;
+}
