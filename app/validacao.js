@@ -26,18 +26,8 @@ function corrigeNumero(palavra) {
 
 function verificaChute(num) {
     const numero = +num
-    if (Number.isNaN(numero)) {
-        if (corrigeNumero(num))
-        saidaFront.innerHTML += '<div>Número inválido</div>'
-    } else {
-        if (numero > maiorValor || numero < menorValor) {
-            saidaFront.innerHTML += `<div>Número inválido. Fale um número entre ${menorValor} e ${maiorValor}</div>`
-        } else {
-            maiorOuMenor(numero)
-        }
-    }
 
-    if (numero === numeroSecreto) {
+    if (numero === numeroSecreto ) {
         document.body.innerHTML = `
             <h1>Você acertou!</h1>
             <h3>O número secreto era ${numeroSecreto}</h3>
@@ -47,6 +37,31 @@ function verificaChute(num) {
         botao.addEventListener('click', () => {
             window.location.reload()
         })
+    } else if (num == 'game over' ){
+        document.body.innerHTML = `
+            <h1>GAME OVER</h1>
+            <button id="reset">Reiniciar</button>
+        `
+
+        const botao = document.getElementById('reset')
+        botao.addEventListener('click', () => {
+            window.location.reload()
+        })
+
+        document.body.style.backgroundColor = 'red'
+        botao.style.fontSize = '1.5em'
+        botao.style.margin = '1.5em'
+    } else {
+        if (Number.isNaN(numero)) {
+            if (corrigeNumero(num))
+            saidaFront.innerHTML += '<div>Número inválido</div>'
+        } else {
+            if (numero > maiorValor || numero < menorValor) {
+                saidaFront.innerHTML += `<div>Número inválido. Fale um número entre ${menorValor} e ${maiorValor}</div>`
+        } else {
+            maiorOuMenor(numero)
+        }
+    }
     }
 
     
